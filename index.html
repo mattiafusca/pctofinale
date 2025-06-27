@@ -6,25 +6,25 @@
   <title>Le mie esperienze PCTO</title>
   <style>
     :root {
-      --bordeaux: #800020;
-      --bordeaux-light: #a03040;
-      --bg-light: #fff7f7;
-      --text: #2b2b2b;
+      --blu: #003366;
+      --blu-chiaro: #00509e;
+      --giallo: #ffd700;
+      --sfondo: #f9f9f9;
+      --testo: #2b2b2b;
     }
 
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background-color: white;
-      color: var(--text);
+      color: var(--testo);
       scroll-behavior: smooth;
     }
 
-    /* Navbar */
     nav {
       position: fixed;
       width: 100%;
-      background-color: var(--bordeaux);
+      background-color: var(--blu);
       color: white;
       padding: 12px 20px;
       z-index: 1000;
@@ -47,11 +47,11 @@
     }
 
     nav a:hover {
-      text-decoration: underline;
+      color: var(--giallo);
     }
 
     header {
-      background-color: var(--bordeaux);
+      background-color: var(--blu);
       color: white;
       text-align: center;
       padding: 100px 20px 60px;
@@ -84,15 +84,15 @@
       gap: 40px;
       margin-bottom: 60px;
       align-items: center;
-      background-color: var(--bg-light);
+      background-color: var(--sfondo);
       padding: 30px;
       border-radius: 12px;
+      border-left: 8px solid var(--giallo);
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      transition: transform 0.3s;
     }
 
     .esperienza:hover {
-      transform: scale(1.01);
+      background-color: #fffdf2;
     }
 
     .esperienza:nth-child(even) {
@@ -110,7 +110,7 @@
     }
 
     .esperienza-content h3 {
-      color: var(--bordeaux);
+      color: var(--blu-chiaro);
       margin-top: 0;
     }
 
@@ -119,22 +119,22 @@
     }
 
     .finale {
-      background-color: #f2f2f2;
-      border-left: 6px solid var(--bordeaux);
+      background-color: #f0f8ff;
+      border-left: 6px solid var(--blu-chiaro);
       padding: 30px;
       border-radius: 12px;
       font-size: 1.1em;
     }
 
     .finale em {
-      color: var(--bordeaux-light);
+      color: var(--blu);
       font-weight: bold;
       display: block;
       margin-top: 15px;
     }
 
     footer {
-      background-color: var(--bordeaux);
+      background-color: var(--blu);
       color: white;
       text-align: center;
       padding: 20px;
