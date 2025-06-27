@@ -7,13 +7,19 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #fff7f7;
+      background-color: #fdf9f9;
       color: #2b2b2b;
       line-height: 1.8;
     }
 
+    :root {
+      --bordeaux: #800020;
+      --bordeaux-light: #a32c41;
+      --bordeaux-bg: #f7ecef;
+    }
+
     header {
-      background-color: #d62828;
+      background-color: var(--bordeaux);
       color: white;
       padding: 50px 20px;
       text-align: center;
@@ -27,7 +33,7 @@
 
     header p {
       font-size: 1.2em;
-      opacity: 0.9;
+      opacity: 0.95;
     }
 
     main {
@@ -41,17 +47,22 @@
     }
 
     h2 {
-      color: #c1121f;
+      color: var(--bordeaux);
       font-size: 1.8em;
       margin-bottom: 15px;
     }
 
     .esperienza {
-      background-color: #ffe5e5;
-      border-left: 6px solid #c1121f;
+      background-color: var(--bordeaux-bg);
+      border-left: 6px solid var(--bordeaux);
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: transform 0.2s;
+    }
+
+    .esperienza:hover {
+      transform: translateY(-3px);
     }
 
     .esperienza img {
@@ -63,16 +74,20 @@
     }
 
     footer {
-      background-color: #f8d7da;
+      background-color: var(--bordeaux);
       padding: 20px;
       text-align: center;
       font-size: 0.9em;
-      color: #5a0000;
+      color: white;
     }
 
     p em {
-      color: #9e1a1a;
+      color: var(--bordeaux-light);
       font-weight: bold;
+    }
+
+    strong {
+      color: var(--bordeaux);
     }
 
     @media (max-width: 600px) {
@@ -100,10 +115,10 @@
   </section>
 
   <section>
-    <h2>Esperienza al MUST (terza superiore)</h2>
+    <h2>Esperienza al MAST (terza superiore)</h2>
     <div class="esperienza">
-      <p>Il mio primo PCTO si è svolto al MUST, dove ho lavorato in gruppo su attività di <strong>packaging</strong>. Abbiamo ideato un prodotto e lo abbiamo presentato in una fase finale molto coinvolgente. È stato interessante collaborare con i compagni, affrontare insieme le sfide e conoscere il funzionamento di macchinari durante la visita guidata all'interno dell’azienda. Questa esperienza mi ha dato un primo contatto concreto con il mondo del lavoro.</p>
-      <img src="https://www.museidibologna.it/wp-content/uploads/2019/02/mast-bologna.jpg" alt="MUST Bologna">
+      <p>Il mio primo PCTO si è svolto al MAST, dove ho lavorato in gruppo su attività di <strong>packaging</strong>. Abbiamo ideato un prodotto e lo abbiamo presentato in una fase finale molto coinvolgente. È stato interessante collaborare con i compagni, affrontare insieme le sfide e conoscere il funzionamento di macchinari durante la visita guidata all'interno dell’azienda. Questa esperienza mi ha dato un primo contatto concreto con il mondo del lavoro.</p>
+      <img src="https://www.museidibologna.it/wp-content/uploads/2019/02/mast-bologna.jpg" alt="MAST Bologna">
     </div>
   </section>
 
@@ -125,7 +140,7 @@
 
   <section>
     <h2>Riflessioni finali</h2>
-    <p><strong>In conclusione,</strong> queste tre esperienze mi hanno fatto crescere sotto tanti aspetti. Ho imparato a collaborare, a gestire il mio tempo, a rispettare gli orari e soprattutto a mettermi in gioco. Ogni azienda mi ha lasciato qualcosa di diverso: il lavoro manuale, quello sui dati e quello creativo. </p>
+    <p><strong>In conclusione,</strong> queste tre esperienze mi hanno fatto crescere sotto tanti aspetti. Ho imparato a collaborare, a gestire il mio tempo, a rispettare gli orari e soprattutto a mettermi in gioco. Ogni azienda mi ha lasciato qualcosa di diverso: il lavoro manuale, quello sui dati e quello creativo.</p>
     <p><em>“Questo punto è importante perché dimostra quanto sia utile il contatto diretto con le realtà lavorative, anche durante il percorso scolastico.”</em></p>
   </section>
 
