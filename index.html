@@ -1,109 +1,136 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Le mie esperienze PCTO</title>
   <style>
     :root {
       --bordeaux: #800020;
-      --bordeaux-light: #9d2235;
-      --bordeaux-bg: #f9f0f2;
+      --bordeaux-light: #a03040;
+      --bg-light: #fff7f7;
       --text: #2b2b2b;
     }
 
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #fff;
+      background-color: white;
       color: var(--text);
-      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      width: 100%;
+      background-color: var(--bordeaux);
+      color: white;
+      padding: 12px 20px;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    nav h1 {
+      margin: 0;
+      font-size: 1.4em;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
 
     header {
       background-color: var(--bordeaux);
       color: white;
       text-align: center;
-      padding: 60px 20px 40px;
+      padding: 100px 20px 60px;
     }
 
-    header h1 {
+    header h2 {
       font-size: 3em;
-      margin-bottom: 10px;
+      margin: 0;
     }
 
     header p {
       font-size: 1.2em;
-      opacity: 0.95;
+      margin-top: 10px;
+      opacity: 0.9;
     }
 
-    main {
+    section {
+      padding: 60px 20px;
       max-width: 1100px;
       margin: auto;
-      padding: 40px 20px;
     }
 
-    section.intro {
+    .intro {
       text-align: center;
-      margin-bottom: 50px;
       font-size: 1.1em;
     }
 
-    .timeline {
+    .esperienza {
       display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
-    }
-
-    .card {
-      background-color: var(--bordeaux-bg);
-      border-left: 5px solid var(--bordeaux);
+      gap: 40px;
+      margin-bottom: 60px;
+      align-items: center;
+      background-color: var(--bg-light);
+      padding: 30px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      width: 100%;
-      max-width: 330px;
-      padding: 20px;
       transition: transform 0.3s;
     }
 
-    .card:hover {
-      transform: scale(1.03);
+    .esperienza:hover {
+      transform: scale(1.01);
     }
 
-    .card h3 {
+    .esperienza:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .esperienza img {
+      width: 45%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .esperienza-content {
+      width: 55%;
+    }
+
+    .esperienza-content h3 {
       color: var(--bordeaux);
       margin-top: 0;
     }
 
-    .card p {
-      margin-bottom: 10px;
+    .esperienza-content p {
+      font-size: 1em;
     }
 
-    .card img {
-      width: 100%;
-      border-radius: 10px;
-      margin-top: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    .finale {
+      background-color: #f2f2f2;
+      border-left: 6px solid var(--bordeaux);
+      padding: 30px;
+      border-radius: 12px;
+      font-size: 1.1em;
     }
 
-    section.conclusione {
-      margin-top: 60px;
-      text-align: center;
-      background-color: #f6f6f6;
-      padding: 30px 20px;
-      border-radius: 10px;
-    }
-
-    section.conclusione strong {
-      color: var(--bordeaux);
-    }
-
-    section.conclusione em {
+    .finale em {
       color: var(--bordeaux-light);
       font-weight: bold;
       display: block;
-      margin-top: 10px;
+      margin-top: 15px;
     }
 
     footer {
@@ -111,61 +138,74 @@
       color: white;
       text-align: center;
       padding: 20px;
-      font-size: 0.9em;
       margin-top: 60px;
     }
 
     @media (max-width: 768px) {
-      .timeline {
-        flex-direction: column;
-        align-items: center;
+      .esperienza {
+        flex-direction: column !important;
       }
 
-      header h1 {
-        font-size: 2.2em;
+      .esperienza img,
+      .esperienza-content {
+        width: 100%;
+      }
+
+      header h2 {
+        font-size: 2em;
       }
     }
   </style>
 </head>
 <body>
 
+<nav>
+  <h1>PCTO – Mattia</h1>
+  <div>
+    <a href="#mast">MAST</a>
+    <a href="#prometeia">Prometeia</a>
+    <a href="#acme">ACME</a>
+    <a href="#riflessioni">Riflessioni</a>
+  </div>
+</nav>
+
 <header>
-  <h1>Il mio percorso PCTO</h1>
-  <p>Tre esperienze che mi hanno fatto crescere tra scuola e mondo del lavoro</p>
+  <h2>Il mio percorso PCTO</h2>
+  <p>Tre esperienze, tre mondi diversi, un'unica crescita personale e professionale</p>
 </header>
 
-<main>
-  <section class="intro">
-    <p>Nel corso del triennio ho partecipato a tre percorsi PCTO in aziende diverse di Bologna. Ognuno mi ha lasciato competenze e lezioni uniche: dalla creatività alla programmazione, dal lavoro manuale alla collaborazione in team.</p>
-  </section>
+<section class="intro">
+  <p>Durante il triennio ho partecipato a tre esperienze PCTO uniche, che mi hanno permesso di entrare a contatto con il mondo del lavoro. Dalla creatività alla programmazione, ogni esperienza ha lasciato un segno nel mio percorso.</p>
+</section>
 
-  <div class="timeline">
-
-    <div class="card">
-      <h3>MAST (3ª superiore)</h3>
-      <p>Esperienza creativa con attività di <strong>packaging</strong>. Ho lavorato in team, ideato un prodotto e affrontato sfide reali. Abbiamo visitato i macchinari e presentato il progetto in una fase finale coinvolgente.</p>
-      <img src="https://www.museidibologna.it/wp-content/uploads/2019/02/mast-bologna.jpg" alt="MAST Bologna">
-    </div>
-
-    <div class="card">
-      <h3>Prometeia (4ª superiore)</h3>
-      <p>Ambiente professionale e moderno. Ho gestito <strong>API</strong>, modificato <strong>file di log</strong> e convertito <strong>XML/JSON</strong>. Lavoro in smart working con orari flessibili e attenzione ai dettagli.</p>
-      <img src="https://www.ceflaengineering.com/wp-content/uploads/2022/08/Prometeia-thumbs.jpg" alt="Prometeia Bologna">
-    </div>
-
-    <div class="card">
-      <h3>ACME (5ª superiore)</h3>
-      <p>Esperienza tecnica nello sviluppo web con <strong>HTML</strong> e <strong>CSS</strong>. Ho realizzato siti per clienti, imparato l'autonomia e affrontato incarichi con responsabilità e spirito creativo.</p>
-      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=80" alt="Web Development">
-    </div>
-
+<section class="esperienza" id="mast">
+  <img src="https://www.museidibologna.it/wp-content/uploads/2019/02/mast-bologna.jpg" alt="MAST Bologna" />
+  <div class="esperienza-content">
+    <h3>MAST (3ª superiore)</h3>
+    <p>Il mio primo PCTO si è svolto al MAST, dove ho lavorato in gruppo su attività di <strong>packaging</strong>. Abbiamo ideato un prodotto e lo abbiamo presentato in una fase finale molto coinvolgente. È stato interessante collaborare con i compagni, affrontare insieme le sfide e conoscere il funzionamento di macchinari durante la visita guidata. Mi ha dato un primo contatto concreto con il mondo del lavoro.</p>
   </div>
+</section>
 
-  <section class="conclusione">
-    <p><strong>In conclusione</strong>, questi PCTO mi hanno insegnato a lavorare in gruppo, organizzare il mio tempo e affrontare sfide reali. Sono cresciuto come persona e come studente.</p>
-    <em>“L'esperienza diretta nel mondo del lavoro è il modo migliore per imparare davvero.”</em>
-  </section>
-</main>
+<section class="esperienza" id="prometeia">
+  <img src="https://www.ceflaengineering.com/wp-content/uploads/2022/08/Prometeia-thumbs.jpg" alt="Prometeia Bologna" />
+  <div class="esperienza-content">
+    <h3>Prometeia (4ª superiore)</h3>
+    <p>In Prometeia ho respirato un ambiente altamente professionale. Gli orari erano flessibili (9-18), con possibilità di smart working. Mi sono occupato dell'uso di <strong>API</strong>, della modifica di <strong>file di log</strong> e della conversione tra <strong>formati XML e JSON</strong>. Un’opportunità importante per migliorare l’attenzione ai dettagli e lavorare in un contesto informatico moderno.</p>
+  </div>
+</section>
+
+<section class="esperienza" id="acme">
+  <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=80" alt="Web development in ACME" />
+  <div class="esperienza-content">
+    <h3>ACME (5ª superiore)</h3>
+    <p>In quinta superiore ho svolto il mio PCTO in ACME, seguito dal tutor <strong>Giampaolo Montaguti</strong>. Realizzavamo siti web per clienti esterni, utilizzando <strong>HTML</strong> e <strong>CSS</strong>. Ho imparato a lavorare in autonomia, rispettando orari professionali (8:30 – 17:30), affrontando incarichi con responsabilità e spirito creativo.</p>
+  </div>
+</section>
+
+<section class="finale" id="riflessioni">
+  <p><strong>In conclusione</strong>, queste tre esperienze mi hanno permesso di crescere in ambiti diversi: organizzazione, comunicazione, problem solving, creatività e competenze digitali.</p>
+  <em>“Il contatto diretto con le aziende è il miglior ponte tra scuola e mondo del lavoro.”</em>
+</section>
 
 <footer>
   &copy; 2025 Mattia – Esperienze PCTO | Tutti i diritti riservati
